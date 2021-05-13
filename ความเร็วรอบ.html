@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หาความเร็วตัดและความเร็วรอบ</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .turning {
+            width: 400px;
+            height: 300px;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: paleturquoise;
+            padding: 15px;
+            margin: 20px;
+            padding-left: 40px;
+        }
+
+        .milling {
+            width: 400px;
+            height: 550px;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: paleturquoise;
+            padding: 15px;
+            margin: 20px;
+            padding-left: 40px;
+        }
+
+        .drilling {
+            width: 400px;
+            height: 300px;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: paleturquoise;
+            padding: 15px;
+            margin: 20px;
+            padding-left: 40px;
+        }
+
+        .data {
+            width: 400px;
+            height: 550px;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: paleturquoise;
+            padding: 15px;
+            margin: 20px;
+            padding-left: 40px;
+        }
+    </style>
+
+    <script>
+        function v() {
+            let d = parseFloat(document.getElementById("cal").value);
+            let n = parseFloat(document.getElementById("caln2").value);
+            let v = (3.14 * d * n) / 1000;
+            document.getElementById("calv1").value = v.toFixed(2);
+        }
+        function n() {
+            let d = parseFloat(document.getElementById("cal").value);
+            let v = parseFloat(document.getElementById("calv1").value);
+            let n = (1000 * v) / (3.14 * d);
+            document.getElementById("caln2").value = n.toFixed(2);
+        }
+        // milling1
+        function v1() {
+            let d = parseFloat(document.getElementById("2cal").value);
+            let n = parseFloat(document.getElementById("2caln2").value);
+            let v = (3.14 * d * n) / 1000;
+            document.getElementById("2calv1").value = v.toFixed(2);
+        }
+        function n1() {
+            let d = parseFloat(document.getElementById("2cal").value);
+            let v = parseFloat(document.getElementById("2calv1").value);
+            let n = (1000 * v) / (3.14 * d);
+            document.getElementById("2caln2").value = n.toFixed(2);
+        }
+        // drilling
+        function v2() {
+            let d = parseFloat(document.getElementById("3cal").value);
+            let n = parseFloat(document.getElementById("3caln2").value);
+            let v = (3.14 * d * n) / 1000;
+            document.getElementById("3calv1").value = v.toFixed(2);
+        }
+        function n2() {
+            let d = parseFloat(document.getElementById("3cal").value);
+            let v = parseFloat(document.getElementById("3calv1").value);
+            let n = (1000 * v) / (3.14 * d);
+            document.getElementById("3caln2").value = n.toFixed(2);
+        }
+        // milling
+        function Vf() {
+            let fz = parseFloat(document.getElementById("fz").value);
+            let z = parseFloat(document.getElementById("5cal").value);
+            let n = parseFloat(document.getElementById("2caln2").value);
+            let Vf = fz * z * n;
+            document.getElementById("Vf").value = Vf.toFixed(2);
+        }
+        function fz() {
+            let Vf = parseFloat(document.getElementById("Vf").value);
+            let z = parseFloat(document.getElementById("5cal").value);
+            let n = parseFloat(document.getElementById("2caln2").value);
+            let fz = Vf / (z * n);
+            document.getElementById("fz").value = fz.toFixed(4);
+        }
+
+    </script>
+    <style>
+        .head {
+            background-color: aqua;
+            text-align: center;
+            padding: 70px;
+            color: chocolate;
+        }
+
+        .body {
+            background-color: #fff892;
+            margin: 0px;
+
+        }
+
+        .head h1 {
+            color: red;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .head p {
+            color: orange;
+            font-size: 25px;
+            font-family: fantasy;
+        }
+
+
+        .menu1 {
+            background-color: wheat;
+            overflow: hidden;
+        }
+
+        .menu1 a {
+            display: block;
+            float: left;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        .menu1 a:hover {
+            background-color: rgb(175, 226, 107);
+            transition: all 0.5s ease;
+        }
+    </style>
+
+</head>
+
+<body class="body">
+
+    <div class="head">
+        <h1>APE 100 Computer Programming</h1>
+        <p> Cutting&Machine</p>
+    </div>
+
+    <div class="menu1">
+        <a href="ep1.html">Conversion</a>
+        <a href="APE100-2.html" target="_blank">คำสั่ง HTML</a>
+        <a href="The 7 Wastes.html" target="_blank">The 7 Wastes</a>
+        <a href="Portfolio.html" target="_blank">Portfolio</a>
+        <a href="TPS 4 STEPS.html">TPS 4 STEPS</a>
+        <a href="video.html">APE100 </a>
+        <a href="ความเร็วรอบ.html">APE122</a>
+        <a href="APE112.html">APE112 </a>  
+        <a href="GEN111.html">GEN111 </a>
+        <a href="LNG220.html">LNG220 </a>
+        <a href="MTH102.html">MTH102 </a>
+        <a href="PHY104.html">PHY104 </a>
+        <a href="PHY192.html">PHY192 </a>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="turning">
+            <h3>หาความเร็วตัดและความเร็วรอบ(งานกลึง)</h3>
+            <label for="">ขนาดเส้นผ่านศูนย์กลางของชิ้นงาน(D)</label><br><br>
+            <input type="text" name="" id="cal">
+            <h>มิลลิเมตร</h>
+            <br><br>
+            <label for="">ความเร็บรอบ (N)</label><br><br>
+            <input type="text" name="" id="caln2">
+            <button onclick="n()">รอบ/นาที</button>
+            <br><br>
+            <label for="">ความเร็วตัด (V)</label><br><br>
+            <input type="text" name="" id="calv1">
+            <button onclick="v()">เมตร/นาที</button>
+
+        </div>
+
+        <div class="drilling">
+            <h3>หาความเร็วตัดและความเร็วรอบ(งานเจาะ)</h3>
+            <label for="">ขนาดเส้นผ่านศูนย์กลางของดอกสว่าน(D)</label><br><br>
+            <input type="text" name="" id="3cal">
+            <h>มิลลิเมตร</h>
+            <br><br>
+            <label for="">ความเร็บรอบ (N)</label><br><br>
+            <input type="text" name="" id="3caln2">
+            <button onclick="n2()">รอบ/นาที</button>
+            <br><br>
+            <label for="">ความเร็วตัด (V)</label><br><br>
+            <input type="text" name="" id="3calv1">
+            <button onclick="v2()">เมตร/นาที</button>
+
+
+        </div>
+
+        <div class="milling">
+            <h3>หาความเร็วตัดและความเร็วรอบ(งานกัด)</h3>
+            <label for="">ขนาดเส้นผ่านศูนย์กลางของดอกกัด(D)</label><br><br>
+            <input type="text" name="" id="2cal">
+            <h>มิลลิเมตร</h>
+            <br><br>
+            <label for="">จำนวนฟันของดอกกัด(Z)</label><br><br>
+            <input type="text" name="" id="5cal">
+            <h>ฟัน</h>
+            <br><br>
+            <label for="">ความเร็วฟีด(vf)</label><br><br>
+            <input type="text" name="" id="Vf">
+            <button onclick="Vf()">มิลลิเมตร/นาที</button>
+            <br><br>
+            <label for="">Feed per Tooth(fz)</label><br><br>
+            <input type="text" name="" id="fz">
+            <button onclick="fz()">มิลลิเมตร/ฟัน</button>
+            <br><br>
+            <label for="">ความเร็บรอบ (N)</label><br><br>
+            <input type="text" name="" id="2caln2">
+            <button onclick="n1()">รอบ/นาที</button>
+            <br><br>
+            <label for="">ความเร็วตัด (V)</label><br><br>
+            <input type="text" name="" id="2calv1">
+            <button onclick="v1()">เมตร/นาที</button>
+
+        </div>
+
+        <div class="data">
+            <image src="v.png" width="150px" height="100px">
+                <image src="S__6946819.jpg" width="200px" height="100px">
+                    <h3>V=ความเร็วตัด(เมตร/นาที)</h3>
+                    <h3>N=ความเร็บรอบ(รอบ/นาที)</h3>
+                    <h3>π=3.14</h3>
+                    <h3>D=ขนาดเส้นผ่านศูนย์กลางของชิ้นงาน,ดอกกัด,ดอกสว่าน(มิลลิเมตร)</h3>
+                    <h3>Z=จำนวนฟันของดอกกัด(ฟัน)</h3>
+                    <h3>vf=ความเร็วฟีด(มิลลิเมตร/นาที)</h3>
+                    <h3>fz=Feed per Tooth(มิลลิเมตร/ฟัน)</h3>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>

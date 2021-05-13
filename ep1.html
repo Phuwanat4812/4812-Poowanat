@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion</title>
+
+    <script>
+        // function basicCalculation() {
+        // var Number1 = parseInt(document.getElementById("Number1").value);
+        // var Number2 = parseInt(document.getElementById("Number2").value);
+        // document.getElementById("Result").value = Number1 + Number2;
+        // ไม่มีเลขทศนิยม
+        // }
+        function basicCalculation() {
+            var Number1 = parseFloat(document.getElementById("Number1").value);
+            var Number2 = parseFloat(document.getElementById("Number2").value);
+            var res;
+            var operation = document.getElementById("operator").value
+
+            if (operation === "+") {
+                res = Number1 + Number2;
+            }
+            if (operation === "-") {
+                res = Number1 - Number2;
+            }
+            if (operation === "*") {
+                res = Number1 * Number2;
+            }
+            if (operation === "/") {
+                res = Number1 / Number2;
+            }
+            document.getElementById("Result").value = res.toFixed(2);
+            // มีเลขทศนิยม
+        }
+    </script>
+
+    <style>
+        .calculator {
+            width: 250px;
+            height: 200px;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: paleturquoise;
+            padding: 10px;
+            margin: 20px;
+            padding-left: 40px;
+
+
+
+
+
+
+
+        }
+
+        /* 
+        .calculator h4 {
+            text-align: center;
+
+        } */
+
+        .calculator input {
+            background-color: wheat;
+        }
+
+        .calculator button {
+            background-color: palegreen;
+        }
+
+        .calculator select {
+            background-color: papayawhip;
+        }
+
+        /* Temperature Conversion  */
+        .TemperConversion {
+            width: 250px;
+            height: 200px;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: paleturquoise;
+            padding: 10px;
+            margin: 20px;
+            padding-left: 40px;
+
+
+        }
+
+        /* .container {
+            display: flex;
+            flex-wrap: wrap;
+
+        } */
+    </style>
+
+    <script>
+        function c2f() {
+            let c = parseFloat(document.getElementById("cel").value);
+            let f = c * (9 / 5) + 32;
+            document.getElementById("fah").value = f.toFixed(2);
+        }
+        function f2c() {
+            let f = parseFloat(document.getElementById("fah").value);
+            let c = (f - 32) * 5 / 9;
+            document.getElementById("cel").value = c.toFixed(2);
+        }
+
+
+    </script>
+    <style>
+        .head {
+            background-color: aqua;
+            text-align: center;
+            padding: 70px;
+            color: chocolate;
+        }
+
+        .body {
+            background-color: #fff892;
+            margin: 0px;
+
+        }
+
+        .head h1 {
+            color: red;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .head p {
+            color: orange;
+            font-size: 25px;
+            font-family: fantasy;
+        }
+
+        .menu1 {
+            background-color: wheat;
+            overflow: hidden;
+        }
+
+        .menu1 a {
+            display: block;
+            float: left;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        .menu1 a:hover {
+            background-color: rgb(175, 226, 107);
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+
+<body class="body container">
+
+
+    <div class="head">
+        <h1>APE 100 Computer Programming</h1>
+        <P>Conversion</P>
+    </div>
+
+    <div class="menu1">
+        <a href="ep1.html">Conversion</a>
+        <a href="APE100-2.html" target="_blank">คำสั่ง HTML</a>
+        <a href="The 7 Wastes.html" target="_blank">The 7 Wastes</a>
+        <a href="Portfolio.html" target="_blank">Portfolio</a>
+        <a href="TPS 4 STEPS.html">TPS 4 STEPS</a>
+        <a href="video.html">APE100 </a>
+        <a href="ความเร็วรอบ.html">APE122</a>
+        <a href="APE112.html">APE112 </a>  
+        <a href="GEN111.html">GEN111 </a>
+        <a href="LNG220.html">LNG220 </a>
+        <a href="MTH102.html">MTH102 </a>
+        <a href="PHY104.html">PHY104 </a>
+        <a href="PHY192.html">PHY192 </a>
+
+    </div>
+    <!-- Basic Calculator -->
+
+    <div class="calculator">
+
+
+        <h4>Basic Calculator</h4>
+        <label for="">Number1</label><br>
+        <input type="text" name="" id="Number1">
+        <select name="" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <br>
+        <label for="">Number2</label><br>
+        <input type="text" name="" id="Number2">
+        <br>
+        <label for="">Result</label><br>
+        <input type="text" name="" id="Result" size="10px">
+        <button onclick="basicCalculation()">Enter</button>
+    </div>
+
+    <!-- Temperature Conversion -->
+    <div class="TemperConversion">
+
+        <h4>Temperature Conversion</h4>
+        <label for="">Celcius[°C]</label><br>
+        <input type="text" name="" id="cel" size="10px">
+        <button onclick="c2f()">c2f</button>
+        <br>
+        <label for="">Fahrenheit[°F]</label><br>
+        <input type="text" name="" id="fah" size="10px">
+        <button onclick="f2c()">f2c</button>
+    </div>
+    </div>
+</body>
+
+</html>
